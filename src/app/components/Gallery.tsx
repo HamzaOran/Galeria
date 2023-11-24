@@ -1,7 +1,7 @@
 import fetchImages from '@/lib/fetchImages';
-import type { ImageResults } from '@/models/Images';
 import ImgContainer from './ImgContainer';
 import addBlurredDataUrls from '@/lib/getBase64';
+import { ImageResults } from '@/Models/Images';
 
 type Props = {
   topic?: string | undefined;
