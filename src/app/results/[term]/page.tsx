@@ -6,7 +6,7 @@ type Props = {
   };
 };
 
-export function generatemetadata({ params: { term } }: Props) {
+export function generateMetadata({ params: { term } }: Props) {
   return {
     title: `Results for ${term}`,
   };
