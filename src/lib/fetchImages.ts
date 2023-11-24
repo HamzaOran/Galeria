@@ -1,10 +1,10 @@
-import type { ImagesResults } from '@/models/Images';
-import { ImagesSchemaWithPhotos } from '@/models/Images';
+import type { ImageResults } from '@/Models/Images';
+import { ImagesSchemaWithPhotos } from '@/Models/Images';
 import env from './env';
 
 export default async function fetchImages(
   url: string
-): Promise<ImagesResults | undefined> {
+): Promise<ImageResults | undefined> {
   try {
     const res = await fetch(url, {
       headers: {
@@ -14,7 +14,7 @@ export default async function fetchImages(
 
     if (!res.ok) throw new Error('Fetch Images error:\n ');
 
-    const imagesResults: ImagesResults = await res.json();
+    const imagesResults: ImageResults = await res.json();
     //console.log(imagesResults)
     // Parse data with Zod schema
     const parsedData = ImagesSchemaWithPhotos.parse(imagesResults);

@@ -1,5 +1,5 @@
 import { getPlaiceholder } from 'plaiceholder';
-import type { Photo, ImageResults } from '@/models/Images';
+import type { Photo, ImageResults } from '@/Models/Images';
 
 async function getBase64(imageUrl: string) {
   try {
@@ -20,7 +20,7 @@ async function getBase64(imageUrl: string) {
 }
 
 export default async function addBlurredDataUrls(
-  images: ImagesResults
+  images: ImageResults
 ): Promise<Photo[]> {
   const base64Promises = images.photos.map((photo) =>
     getBase64(photo.src.large)
