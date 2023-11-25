@@ -1,5 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from 'react-icons';
 
 export default function Loading() {
   return (
