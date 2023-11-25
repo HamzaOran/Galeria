@@ -4,7 +4,7 @@ export default function Loading() {
   return (
     <div className="flex justify-center  mt-96">
       <svg
-        class="animate-spin"
+        className="animate-spin"
         xmlns="http://www.w3.org/2000/svg"
         height="10em"
         viewBox="0 0 512 512"
